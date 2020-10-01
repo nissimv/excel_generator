@@ -1,0 +1,14 @@
+This script was created using the
+https://towardsdatascience.com/introducing-pydbgen-a-random-dataframe-database-table-generator-b5c7bdc84be5
+There are two actions I took to make it work
+
+Comment out line 191 in Lib\site-packages\pydbgen\pydbgen.py #fake.seed(self.seed) as this method is no longer in use
+as explained in in the Faker Python package https://faker.readthedocs.io/en/master/fakerclass.html
+
+In addition a missing package openpyxl was manually added using pip
+pip install openpyxl
+
+This is just a short Out of the box generator to create xlsx file and fill it with Fake data for any purpose
+There is an example of output file in this repository named customer_details.xlsx
+
+In addition an exe file was created using pyinstaller with all the packages bundled
